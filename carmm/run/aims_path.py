@@ -31,7 +31,8 @@ def set_aims_command(hpc='hawk', basis_set='light', defaults=2010, nodes_per_ins
 
         # Set a dummy environmental variable to stop overwriting the variable.
         if not aims_species_dir_dummy:
-            global aims_species_dir_dummy = os.getenv("AIMS_SPECIES_DIR")
+            global aims_species_dir_dummy
+            aims_species_dir_dummy = os.getenv("AIMS_SPECIES_DIR")
 
         os.environ["AIMS_SPECIES_DIR"] = aims_species_dir_dummy + "defaults_" + str(defaults) + "/" + basis_set
 
