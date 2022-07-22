@@ -29,8 +29,7 @@ def set_aims_command(hpc='hawk', basis_set='light', defaults=2010, nodes_per_ins
         assert "ASE_AIMS_COMMAND" in os.environ, "Set ASE_AIMS_COMMAND for desktop runs."
         assert "AIMS_SPECIES_DIR" in os.environ, "Set ASE_SPECIES_DIR for desktop runs."
 
-        species = os.getenv["AIMS_SPECIES_DIR"]
-        os.environ["AIMS_SPECIES_DIR"] = species + "/" + basis_set
+        os.environ["AIMS_SPECIES_DIR"] = os.getenv("AIMS_SPECIES_DIR") + "/" + basis_set
 
         return
 
