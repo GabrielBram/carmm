@@ -93,7 +93,7 @@ class ReactAims:
         post_process: str or None
             Basis set to be used for post_processing if energy calculation using a larger basis set is required
         relax_unit_cell: bool
-            True requests a strain filter unit cell relaxation
+            True requests a strain filters unit cell relaxation
         restart: bool
             Request restart from previous geometry if True (True by default)
 
